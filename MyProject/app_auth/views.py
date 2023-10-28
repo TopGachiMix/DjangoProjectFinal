@@ -7,7 +7,7 @@ from .forms import RegistrationForm
 
 @login_required(login_url=reverse_lazy('login'))
 def profile_view(request):
-    return render(request,"profile.html")
+    return render(request, "profile.html")
 
 
 def login_view(request):
@@ -40,9 +40,8 @@ def register_view(request):
            login(request, user)
            return redirect('profile')
    else:
-    form = RegistrationForm()
-    return render(request, 'register.html', {"form": form})
-
+        form = RegistrationForm()
+   return render(request, 'register.html', {"form": form})
     # return render(request, 'register.html')
 
 def logout_view(request):
