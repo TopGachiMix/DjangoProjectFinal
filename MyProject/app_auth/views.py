@@ -40,7 +40,7 @@ def register_view(request):
            login(request, user)
            return redirect('profile')
    else:
-        form = RegistrationForm()
+       form = RegistrationForm()
    return render(request, 'register.html', {"form": form})
     # return render(request, 'register.html')
 

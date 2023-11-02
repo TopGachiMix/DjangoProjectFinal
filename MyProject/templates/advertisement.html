@@ -60,7 +60,7 @@
 
   <div class="container" style="margin: 50px;">
     <div class="display-2">
-      <span class="badge bg-primary">Объявление пользователя "username"</span>
+      <span class="badge bg-primary">Объявление пользователя "{{ user }}"</span>
     </div>
   </div>
   <div class="col offset-2">
@@ -79,8 +79,8 @@
             <p class="card-text">
               {{ adv.description }}
             </p>
-            <span>Автор: "username"</span>
-            <p class="card-text"><small class="text-muted">Размещено: "дата"</small></p>
+            <span>Автор: "{{ user }}"</span>
+            <p class="card-text"><small class="text-muted">Размещено: {{ adv.updated_at }}</small></p>
           </div>
         </div>
       </div>

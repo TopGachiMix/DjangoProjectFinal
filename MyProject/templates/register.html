@@ -57,7 +57,7 @@
   </ul>
     <div class='container'> </div>
       <form method="post">
-        {% csrf_token %}
+      {% csrf_token %}
       <div class="row mb-3">
         <div class="col">
           <label class="col-sm-4 col-form-label offset-4">Username</label>
@@ -105,8 +105,7 @@
         </div>
       </div>
     </form>
-  </div>
-{% endblock %}
-  <script src="js/bootstrap.bundle.min.js"></script>
+ {% endblock %}
+ <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
