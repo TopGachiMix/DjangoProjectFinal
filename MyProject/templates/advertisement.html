@@ -33,28 +33,28 @@
         <span style="font-weight: bold;">Разместить объявление</span>
       </a>
     </li>
-   {% if not user.is_aunthenticated %}
+    {% if not user.is_authenticated %}
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'register' %}">
-        <span style="font-weight: bold;">Регистрация</span>
-      </a>
-    </li>
+    <a class="nav-link" href="{% url 'register' %}">
+      <span style="font-weight: bold;">Регистрация</span>
+    </a>
+  </li>
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'login' %">
-        <span style="font-weight: bold;">Войти</span>
-      </a>
+     <a class="nav-link" href="{% url 'login' %}">
+      <span style="font-weight: bold;">Войти</span>
+     </a>
     </li>
-   {% else %}
+    {% else %}
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'profile' %}">
-        <span style="font-weight: bold;">Профиль</span>
-      </a>
-    </li>
+    <a class="nav-link" href="{% url 'profile' %}">
+      <span style="font-weight: bold;">Профиль</span>
+    </a>
+  </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
-        <span style="font-weight: bold;">Выйти</span>
-      </a>
-    </li>
+    <a class="nav-link" href="#">
+      <span style="font-weight: bold;">Выйти</span>
+    </a>
+  </li>
   {% endif %}
   </ul>
 

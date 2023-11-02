@@ -33,28 +33,29 @@
       </a>
     </li>
     <li class="nav-item">
-      {% if not user.is_aunthenticated %}
-      <a class="nav-link" href="{% url 'register' %}">
-        <span style="font-weight: bold;">Регистрация</span>
-      </a>
-    </li>
+    {% if not user.is_authenticated %}
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'login' %}">
-        <span style="font-weight: bold;">Войти</span>
-      </a>
+    <a class="nav-link" href="{% url 'register' %}">
+      <span style="font-weight: bold;">Регистрация</span>
+    </a>
+  </li>
+    <li class="nav-item">
+     <a class="nav-link" href="{% url 'login' %}">
+      <span style="font-weight: bold;">Войти</span>
+     </a>
     </li>
     {% else %}
     <li class="nav-item">
-      <a class="nav-link" href="{% url 'profile' %}">
-        <span style="font-weight: bold;">Профиль</span>
-      </a>
-    </li>
+    <a class="nav-link" href="{% url 'profile' %}">
+      <span style="font-weight: bold;">Профиль</span>
+    </a>
+  </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">
-        <span style="font-weight: bold;">Выйти</span>
-      </a>
-    </li>
-   {% endif %}
+    <a class="nav-link" href="#">
+      <span style="font-weight: bold;">Выйти</span>
+    </a>
+  </li>
+  {% endif %}
   </ul>
   <div class="row">
     <div class="col" style="margin: 50px;">
